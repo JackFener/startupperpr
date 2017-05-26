@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>One Page Wonder - Start Bootstrap Template</title>
+    <title>StartupperPR</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -116,6 +116,18 @@
         .slider.round:before {
           border-radius: 50%;
         }
+        
+        .image{
+            position:relative;
+            overflow:hidden;
+            padding-bottom:100%;
+        }
+        .image img{
+            position:absolute;
+            top:0;
+            bottom:0;
+            margin:auto;
+        }
     </style>
 
 </head>
@@ -173,85 +185,7 @@
             <h2 class="featurette-heading">Select your targets<br>
                 <span class="text-muted">or choose all of them <input type="checkbox"/></span>
             </h2>
-            <div class="row">
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://yt3.ggpht.com/-NoG7o5O9YIY/AAAAAAAAAAI/AAAAAAAAAAA/qNwBa3hKsgE/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <div class="con" onclick="check('prova');">
-                        <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" class="img-responsive" width="250" height="250">
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                    </div>
-                    <!-- Rounded switch -->
-                    <label class="switch">
-                        <input type="checkbox" id="prova">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
+            <div class="row" id="listaSiti">
             </div>
         </div>
 
@@ -263,7 +197,7 @@
             <h2 class="featurette-heading">The Third Heading
                 <span class="text-muted">Will Seal the Deal.</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead"><button type="submit">Send</button></p>
         </div>
         </form>
 
@@ -299,6 +233,19 @@
                 document.getElementById(id).checked=true;
             }
         }
+        
+        
+        var corpo='';
+        
+        var siti=["TechCrunch", 'PC Mag', 'The Verge', 'Re/Code', 'Wired', 'Mashable', 'MIT Technology Review', 'TechForge', 'Tech Hive', 'CNET', '9to5Mac', 'Android Authority', 'GeekWire', 'Engadget', 'The Guardian', 'Huffingtonpost', 'New York Times', 'The Boston Globe', 'Business Insider', 'Wall Street Journal', 'Forbes', 'Reuters', 'Yahoo'];
+        
+        var foto=["https://tctechcrunch2011.files.wordpress.com/2014/04/tc-logo.jpg", 'https://static1.squarespace.com/static/53fce470e4b0374adfdd30bc/t/54c66f41e4b0454283941dee/1422290754607/pcmag.png', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/The_Verge_logo.svg/2000px-The_Verge_logo.svg.png', 'http://www.underconsideration.com/brandnew/archives/recode_logo.png', 'https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0016/7566/brand.gif?itok=KU3bFyEc', 'https://vignette3.wikia.nocookie.net/logopedia/images/f/fb/Mashable.svg/revision/latest?cb=20141210204659', 'https://d267cvn3rvuq91.cloudfront.net/_/img/stacked-logo.svg?v=2', 'https://www.techforge.pub/wp-content/uploads/2015/02/forge-logo.png', 'http://static.tumblr.com/a4318baae4b4f4f01cc91d03db0d382b/s8mli0y/2Bcmh0gbg/tumblr_static_techhivelogo-new.png', 'https://cnet1.cbsistatic.com/fly/bundles/cnetcore/images/logos/cnet-redball-large.jpg', 'https://s0.wp.com/wp-content/themes/vip/9to5-2015/images/9to5-mac-logo.png', 'http://cdn04.androidauthority.net/wp-content/uploads/2014/09/android-authority-logo.png', 'https://cdn.geekwire.com/wp-content/uploads/2015/02/GeekWire-logo-transparent.png', 'https://s.aolcdn.com/os/engadget/brand-kit/eng-logo-white.png', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_Guardian.svg/2000px-The_Guardian.svg.png', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Huffington_Post_Logo.svg/2000px-Huffington_Post_Logo.svg.png', 'https://upload.wikimedia.org/wikipedia/commons/4/40/New_York_Times_logo_variation.jpg', 'http://www.bostonglobe.com/rw/SysConfig/WebPortal/BostonGlobe/Framework/images/logo-bg-twitter.jpg', 'http://static.businessinsider.com/image/544e9ea56bb3f7554c911e8d-800-440/bilogo-', 'https://static1.squarespace.com/static/5266c48be4b0265ce4092646/t/5334aeaee4b0087e7694257a/1395961519339/WSJ-Logo.jpg?format=500w', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Forbes_logo.svg/2000px-Forbes_logo.svg.png', 'https://agency.reuters.com/content/dam/openweb/images/brand-assets/reuters-logos/rtr_ahz_rgb_pos.gif', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yahoo_Logo.svg/2000px-Yahoo_Logo.svg.png'];
+        for (var i=0;i<siti.length; i++)
+        {
+            var c='check'+siti[i];
+            corpo+=' <div class="col-xs-5 col-sm-2"> <div class="con" onclick="check('+"'"+ c +"'"+');"> <div class="image"><img src="'+foto[i]+'" class="img-responsive" width="250" height="250"></div> <div class="overlay"> <div class="text">'+ siti[i] +'</div> </div> </div> <!-- Rounded switch --> <label class="switch"> <input type="checkbox" id="'+c+'"> <div class="slider round"></div> </label> </div>';
+        }
+        document.getElementById("listaSiti").innerHTML=corpo;
     </script>
 
 </body>
