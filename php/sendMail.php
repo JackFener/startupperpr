@@ -1,5 +1,5 @@
 <?php
- require_once "Mail.php";
+ require_once "directory/Mail.php";
  
  $from = "Giacomo Fava <giacomofava93@gmail.com>";
  $to = "Ramona Recipient <giacomo_fava@yahoo.it>";
